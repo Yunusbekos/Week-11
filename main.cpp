@@ -5,14 +5,39 @@ using namespace std;
 
 // Task 1
 
-// int countValue(const int a[], int n, int x) {
-//     int count = 0;
-//     for(int i = 0; i < n; i++) {
-//         if(a[i] == x) {
-//             count++;
+// void sortArray(int a[], int n) {
+//     for (int i = 0; i < n - 1; i++) {
+//         for (int j = 0; j < n - 1 - i; j++) {
+//             if (a[j] > a[j + 1]) {
+//                 int temp = a[j];
+//                 a[j] = a[j + 1];
+//                 a[j + 1] = temp;
+//             }
 //         }
 //     }
-//     return count;
+// }
+// int countValue(int a[], int n, int x) {
+//     sortArray(a, n);
+//     int l = 0, r = n;
+//     while (l < r) {
+//         int mid = l + (r - l) / 2;
+//         if (a[mid] < x)
+//             l = mid + 1;
+//         else
+//             r = mid;
+//     }
+//     int first = l;
+//     l = 0;
+//     r = n;
+//     while (l < r) {
+//         int mid = l + (r - l) / 2;
+//         if (a[mid] <= x)
+//             l = mid + 1;
+//         else
+//             r = mid;
+//     }
+//     int last = l;
+//     return last - first;
 // }
 // int main() {
 //     int n;
@@ -134,26 +159,26 @@ using namespace std;
 
 // Task 6
 
-void duplicateZeros(int arr[], int n) {
-    for(int i=0;i<n;i++) {
-        if (arr[i] == 0) {
-            for(int j=n-1;j>i;j--) {
-                arr[j]=arr[j-1];
-            }
-            i++;
-        }
-    }
-    for(int i=0;i<n;i++) {
-        cout<<arr[i]<<" ";
-    }
-}
-
-int main() {
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++) {
-        cin>>arr[i];
-    }
-    duplicateZeros(arr,n);
-}
+// void duplicateZeros(int arr[], int n) {
+//     for(int i=0;i<n;i++) {
+//         if (arr[i] == 0) {
+//             for(int j=n-1;j>i;j--) {
+//                 arr[j]=arr[j-1];
+//             }
+//             i++;
+//         }
+//     }
+//     for(int i=0;i<n;i++) {
+//         cout<<arr[i]<<" ";
+//     }
+// }
+//
+// int main() {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++) {
+//         cin>>arr[i];
+//     }
+//     duplicateZeros(arr,n);
+// }
